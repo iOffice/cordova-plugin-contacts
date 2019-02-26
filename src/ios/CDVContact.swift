@@ -1789,19 +1789,19 @@ let kW3ContactUrls = "urls"
                     switch testItem {
                     case kW3ContactFormattedName:
                         var propValue: String = ""
-                        if let prefix = nonMutableRecord?.namePrefix {
+                        if let prefix = nonMutableRecord?.namePrefix, !prefix.isEmpty {
                             propValue = propValue + prefix + " "
                         }
-                        if let firstName = nonMutableRecord?.givenName {
+                        if let firstName = nonMutableRecord?.givenName, !firstName.isEmpty {
                             propValue = propValue + firstName + " "
                         }
-                        if let middleName = nonMutableRecord?.middleName {
+                        if let middleName = nonMutableRecord?.middleName, !middleName.isEmpty {
                             propValue = propValue + middleName + " "
                         }
-                        if let lastName = nonMutableRecord?.familyName {
+                        if let lastName = nonMutableRecord?.familyName, !lastName.isEmpty {
                             propValue = propValue + lastName + " "
                         }
-                        if let suffix = nonMutableRecord?.nameSuffix {
+                        if let suffix = nonMutableRecord?.nameSuffix, !suffix.isEmpty {
                             propValue = propValue + suffix
                         }
                         if (propValue.count > 0) {
