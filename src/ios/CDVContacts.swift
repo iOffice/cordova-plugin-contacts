@@ -310,7 +310,7 @@ class CDVNewContactsController: CNContactViewController {
         })
     }
     
-    func search(_ command: CDVInvokedUrlCommand) {
+    @objc(search:) func search(_ command: CDVInvokedUrlCommand) {
         checkContactPermission()
         let callbackId: String = command.callbackId
         let commandFields = command.argument(at: 0) as? [Any]
